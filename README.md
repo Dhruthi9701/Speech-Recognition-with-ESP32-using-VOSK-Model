@@ -108,9 +108,9 @@ Speech-Recognition-with-ESP32-using-VOSK-Model/ \
 
 ## 🚀 8. Step‑by‑Step Setup & Usage:
 
-🗂️ Copy 0001.mp3...0005.mp3 to SD card; insert into DFPlayer \
+🗂️ Copy 0001.mp3...0005.mp3 to SD card; insert into DFPlayer 
 
-🔌 Wire all hardware as described \
+🔌 Wire all hardware as described 
 
 📲 Upload sketch: compile, upload, open Serial Monitor (115200), wait for [INFO] DFPlayer Initialized., then close
 
