@@ -12,7 +12,6 @@
 8. Step-by-Step Setup & Usage
 9. Configuration Options
 10. Troubleshooting
-<br>
 
 
 ## 🧩 1. Features:
