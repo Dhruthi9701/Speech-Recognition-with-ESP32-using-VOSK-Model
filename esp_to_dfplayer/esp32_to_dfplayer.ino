@@ -15,7 +15,9 @@
     ESP32 GND     → DFPlayer GND
     DFPlayer SPK_1/SPK_2 → Speaker
 
-  Library: DFRobotDFPlayerMini (install via Arduino IDE Library Manager)
+  Required installations for this project:
+    1. “ESP32 by Espressif Systems” (via Arduino Boards Manager)
+    2. “DFRobotDFPlayerMini” library (via Arduino Library Manager)
 */
 
 #include <Arduino.h>
