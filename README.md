@@ -1,0 +1,1 @@
+# Speech-Recognition-with-ESP32-using-VOSK-Model
