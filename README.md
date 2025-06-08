@@ -12,7 +12,7 @@
 8. Step-by-Step Setup & Usage
 9. Configuration Options
 10. Troubleshooting
-
+:contentReference[oaicite:1]{index=1}
 
 ## 🧩 1. Features:
 
@@ -28,7 +28,7 @@
 🎵 Standalone Playback: ESP32 + DFPlayer handle MP3 after trigger
 
 🖥️ PC‑Side Wake‑Word Detection: Uses Vosk on your mic, sends serial commands
-<br>
+:contentReference[oaicite:1]{index=1}
 
 
 
@@ -40,7 +40,7 @@ DFPlayer Mini MP3 Module\
 MicroSD Card (FAT32; files 0001.mp3–0005.mp3)\
 Micro‑USB Cable (for programming ESP32)\
 Jumper Wires
-<br>
+:contentReference[oaicite:1]{index=1}
 
 
 
