@@ -18,22 +18,22 @@
 
 **✔️ Multiple Triggers:**
 
-• “jarvis” → play 0001.mp3 (Audio file contains: "Did someone say genius?")\
-• “hello” → play 0002.mp3 (Audio file contains: "Hello, I'm Listening.")\
-• “hi” → play 0003.mp3 (Audio file contains: "Yes Boss!")\
-• “play” → play 0004.mp3 (Audio file contains: Music(larger mp3 file))
+  • “jarvis” → play 0001.mp3 (Audio file contains: "Did someone say genius?")\
+  • “hello” → play 0002.mp3 (Audio file contains: "Hello, I'm Listening.")\
+  • “hi” → play 0003.mp3 (Audio file contains: "Yes Boss!")\
+  • “play” → play 0004.mp3 (Audio file contains: Music(larger mp3 file))
 
 **💤 Deep‑Sleep Mode:**
 
-• “hammer time” → play 0005.mp3, then enter deep‑sleep (Audio file contains: "OK.... Hammer Time.")
+  • “hammer time” → play 0005.mp3, then enter deep‑sleep (Audio file contains: "OK.... Hammer Time.")
 
 **🎵 Standalone Playback:**
 
-• ESP32 + DFPlayer handle MP3 after trigger
+  • ESP32 + DFPlayer handle MP3 after trigger
 
 **🖥️ PC‑Side Wake‑Word Detection:**
 
-• Uses Vosk on your mic, sends serial commands
+  • Uses Vosk on your mic, sends serial commands
 
 
 
