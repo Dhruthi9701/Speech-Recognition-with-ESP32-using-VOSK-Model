@@ -37,7 +37,7 @@ DFPlayer Mini MP3 Module\
 8 Ω Speaker (up to 3 W)\
 MicroSD Card (FAT32; files 0001.mp3–0005.mp3)\
 Micro‑USB Cable (for programming ESP32)\
-Jumper Wires\
+Jumper Wires
 
 
 ## 🔌 3. Wiring & Connections:
@@ -72,7 +72,7 @@ At the top of esp32_to_dfplayer.ino:
 
 #include <Arduino.h>\
 #include <HardwareSerial.h>\
-#include <DFRobotDFPlayerMini.h>\
+#include <DFRobotDFPlayerMini.h>
 
 📟 The ESP32 listens for serial bytes over UART2 (GPIO18/19):
 
