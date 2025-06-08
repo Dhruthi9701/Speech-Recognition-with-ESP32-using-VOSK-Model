@@ -1,5 +1,9 @@
 # Speech-Recognition-with-ESP32-using-VOSK-Model
 
+• This project transforms your **ESP32 and DFPlayer Mini** into a smart, hands‑free **audio assistant**. Speak simple keywords like **“jarvis”, “hello”, “hi”, “play”, or “hammer time”** to trigger different MP3 tracks. 
+• This setup uses **Vosk speech‑recognition** on your laptop to detect commands, sends them over serial to the ESP32, which then plays the matching audio—and even deep‑sleeps after “hammer time.” 
+• The result is a seamless wake‑word‑controlled playback experience.
+
 ## 🗂️ Table of Contents:
 
 1. Features
