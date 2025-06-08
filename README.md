@@ -13,7 +13,7 @@
 9. Configuration Options
 10. Troubleshooting
 
-
+<br>
 ## 🧩 1. Features:
 
 **✔️ Multiple Triggers:**\
@@ -156,9 +156,9 @@ In Arduino sketch, modify trigger bytes:
 
 ## ⚠️ 10. Troubleshooting
 
-**🔇 No Audio:** Check SD filenames (0001.mp3–0005.mp3); verify speaker polarity \
+**🔇 No Audio:** Check SD filenames (0001.mp3–0005.mp3); verify speaker polarity 
 
-**🔌 Serial Errors:** Ensure PORT matches Device Manager; close other COM-using apps \
+**🔌 Serial Errors:** Ensure PORT matches Device Manager; close other COM-using apps 
 
 **🛑 Wake-Word Not Detected:** Use mic_rms.py to confirm mic input; stay in quiet environment or use a larger Vosk model
 
