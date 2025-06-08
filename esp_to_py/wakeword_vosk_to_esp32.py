@@ -1,5 +1,3 @@
-# wakeword_vosk_to_esp32.py
-#
 # Listens via Vosk ASR on the laptop mic for:
 #   • “jarvis”      → PLAY1
 #   • “hello”       → PLAY2
@@ -9,9 +7,7 @@
 #
 # Dependencies:
 #   pip install vosk sounddevice pyserial
-#
-# You also need the Vosk model folder “vosk-model-small-en-us-0.15”
-# unzipped in the same directory as this script.
+
 
 import os
 import sys
@@ -24,10 +20,10 @@ import serial
 
 # ——— CONFIGURATION ———
 
-# 1) Vosk model folder name (exactly as unzipped, next to this .py file)
+# 1) Vosk model folder name 
 MODEL_DIR_NAME = "vosk-model-small-en-us-0.15"
 
-# 2) Serial port where your ESP32 is listening (e.g. "COM5" on Windows)
+# 2) Serial port where your ESP32 is listening ("COM5" on Windows)
 SERIAL_PORT = "COM5"
 SERIAL_BAUD = 115200
 

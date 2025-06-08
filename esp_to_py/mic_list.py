@@ -1,4 +1,4 @@
-# mic_list.py
+#Enumerates all available audio input devices and prints their index numbers.
 import sounddevice as sd
 
 print("Available audio input devices:\n")

@@ -6,6 +6,7 @@
   - PLAY3  → play 0003.mp3
   - PLAY4  → play 0004.mp3
   - SLEEP  → play 0005.mp3 (“hammer time”), then deep-sleep
+  All the mp3 files are to be stored in an SD Card which is then inserted to the DFPlayer.
 
   Wiring:
     ESP32 GPIO19  → DFPlayer RX
@@ -52,7 +53,7 @@ void setup() {
 void loop() {
   if (Serial.available()) {
     String cmd = Serial.readStringUntil('\n');
-    cmd.trim();  // strip newline/whitespace
+    cmd.trim();  // strip newline
 
     Serial.print("[ESP32] Received: ");
     Serial.println(cmd);
@@ -76,11 +77,11 @@ void loop() {
     else if (cmd.equalsIgnoreCase("SLEEP")) {
       Serial.println("[ESP32] → “hammer time” triggered. Playing 0005.mp3 then deep‐sleep.");
       dfplayer.play(5);      // 0005.mp3 = hammer time clip
-      delay(2000);           // wait about 2 s for it to finish
-      dfplayer.stop();       // ensure it stops
+      delay(2000);           // waits for 2 s for it to finish
+      dfplayer.stop();       // ensures it stops
       Serial.flush();
-      delay(100);            // give serial time to send
-      esp_deep_sleep_start(); // enter deep‐sleep (halting CPU until reset)
+      delay(100);            // giving serial time to send
+      esp_deep_sleep_start(); // enters deep‐sleep (halting CPU until reset)
       // Code never reaches beyond this point until ESP32 resets.
     }
     else {
