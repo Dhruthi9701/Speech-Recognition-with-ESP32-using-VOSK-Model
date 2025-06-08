@@ -169,7 +169,8 @@ In Python scripts:
 
 MIC_INDEX = "your mic index" \
 PORT      = "COM5"                # or correct ESP32 port \
-MODEL_PATH= "vosk-model-small-en-us-0.15" \
+MODEL_PATH= "vosk-model-small-en-us-0.15" 
+
 In Arduino sketch, modify trigger bytes: 
 
 #define TRIGGER_BYTE_PLAY1   0x01 \
