@@ -68,11 +68,11 @@ pip install vosk sounddevice pyserial\
 
 ## 🎯 5. Arduino Sketch Overview:
 
-At the top of esp32_to_dfplayer.ino:\
+At the top of esp32_to_dfplayer.ino:
 
-#include <Arduino.h>
-#include <HardwareSerial.h>
-#include <DFRobotDFPlayerMini.h>
+#include <Arduino.h>\
+#include <HardwareSerial.h>\
+#include <DFRobotDFPlayerMini.h>\
 
 📟 The ESP32 listens for serial bytes over UART2 (GPIO18/19):
 
