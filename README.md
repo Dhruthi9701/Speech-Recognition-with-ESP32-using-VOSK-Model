@@ -12,7 +12,7 @@
 8. Step-by-Step Setup & Usage
 9. Configuration Options
 10. Troubleshooting
-:contentReference[oaicite:1]{index=1}
+
 
 ## 🧩 1. Features:
 
@@ -28,19 +28,19 @@
 🎵 Standalone Playback: ESP32 + DFPlayer handle MP3 after trigger
 
 🖥️ PC‑Side Wake‑Word Detection: Uses Vosk on your mic, sends serial commands
-:contentReference[oaicite:1]{index=1}
+
 
 
 
 ## 💡 2. Hardware Components:
 
-ESP32 Dev Module\
-DFPlayer Mini MP3 Module\
-8 Ω Speaker (up to 3 W)\
-MicroSD Card (FAT32; files 0001.mp3–0005.mp3)\
-Micro‑USB Cable (for programming ESP32)\
-Jumper Wires
-:contentReference[oaicite:1]{index=1}
+1. ESP32 Dev Module\
+2. DFPlayer Mini MP3 Module\
+3. 8 Ω Speaker (up to 3 W)\
+4. MicroSD Card (FAT32; files 0001.mp3–0005.mp3)\
+5. Micro‑USB Cable (for programming ESP32)\
+6. Jumper Wires
+
 
 
 
@@ -52,7 +52,7 @@ ESP32 GPIO19       → DFPlayer RX (soft‑TX) \
 ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  \
 DFPlayer SPK_1     → Speaker +  \
 DFPlayer SPK_2     → Speaker – 
-<br>
+
 
 
 
@@ -70,7 +70,7 @@ Sketch → Include Library → Manage Libraries...
 **Python Host Side:**\
 pip install vosk sounddevice pyserial\
 ✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
-<br>
+
 
 
 
@@ -89,7 +89,7 @@ At the top of esp32_to_dfplayer.ino:
 0x03 → PLAY3 (0003.mp3)  
 0x04 → PLAY4 (0004.mp3)  
 0x05 → SLEEP → PLAY5 (0005.mp3) then deep‑sleep
-<br>
+
 
 
 
@@ -101,7 +101,7 @@ Located in py_to_esp32/:\
 **mic_rms.py** : display RMS levels for mic gain\
 **test_serial.py** : verify ESP32 COM port (default: COM5)\
 **wakeword_vosk_to_esp32.py** : listen for keywords, send trigger byte
-<br>
+
 
 
 
@@ -118,7 +118,7 @@ Speech-Recognition-with-ESP32-using-VOSK-Model/ \
 │   ├─ wakeword_vosk_to_esp32.py \
 │   └─ vosk-model-small-en-us-0.15/ \
 └─ README.md (this file)
-<br>
+
 
 
 
@@ -152,7 +152,7 @@ python test_serial.py
 python wakeword_vosk_to_esp32.py
 
 Speak a trigger word **(“jarvis”, “hello”, “hi”, “play”, “hammer time”)** → ESP32 plays matched track
-<br>
+
 
 
 
@@ -171,7 +171,7 @@ In Arduino sketch, modify trigger bytes:
 #define TRIGGER_BYTE_PLAY3   0x03 \
 #define TRIGGER_BYTE_PLAY4   0x04 \
 #define TRIGGER_BYTE_SLEEP   0x05 
-<br>
+
 
 
 
