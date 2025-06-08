@@ -16,14 +16,14 @@
 
 ## 🧩 1. Features:
 
-**✔️ Multiple Triggers:**\
+**✔️ Multiple Triggers:**
 
 • “jarvis” → play 0001.mp3 (Audio file contains: "Did someone say genius?")\
 • “hello” → play 0002.mp3 (Audio file contains: "Hello, I'm Listening.")\
 • “hi” → play 0003.mp3 (Audio file contains: "Yes Boss!")\
 • “play” → play 0004.mp3 (Audio file contains: Music(larger mp3 file))
 
-**💤 Deep‑Sleep Mode:**\
+**💤 Deep‑Sleep Mode:**
 
 • “hammer time” → play 0005.mp3, then enter deep‑sleep (Audio file contains: "OK.... Hammer Time.")
 
@@ -61,19 +61,15 @@
 ## 📦 4. Software Requirements:
 
 **Arduino IDE Side:**
-
   • Arduino IDE ≥ 1.8.x
 
-**ESP32 Board Support:**\
-
+**ESP32 Board Support:**
   • Tools → Boards Manager → “esp32 by Espressif Systems”
 
-**DFRobotDFPlayerMini Library:**\
-
+**DFRobotDFPlayerMini Library:**
   • Sketch → Include Library → Manage Libraries...
 
-**Python Host Side:**\
-
+**Python Host Side:**
   • pip install vosk sounddevice pyserial\
   ✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
 
