@@ -36,11 +36,11 @@
 
 ## 💡 2. Hardware Components:
 
-1. ESP32 Dev Module\
-2. DFPlayer Mini MP3 Module\
-3. 8 Ω Speaker (up to 3 W)\
-4. MicroSD Card (FAT32; files 0001.mp3–0005.mp3)\
-5. Micro‑USB Cable (for programming ESP32)\
+1. ESP32 Dev Module
+2. DFPlayer Mini MP3 Module
+3. 8 Ω Speaker (up to 3 W)
+4. MicroSD Card (FAT32; files 0001.mp3–0005.mp3)
+5. Micro‑USB Cable (for programming ESP32)
 6. Jumper Wires
 
 
@@ -48,11 +48,11 @@
 
 ## 🔌 3. Wiring & Connections:
 
-1. ESP32 VIN (5 V)    → DFPlayer VCC  \
-2. ESP32 GND          → DFPlayer GND  \
-3. ESP32 GPIO19       → DFPlayer RX (soft‑TX) \ 
-4. ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  \
-5. DFPlayer SPK_1     → Speaker +  \
+1. ESP32 VIN (5 V)    → DFPlayer VCC  
+2. ESP32 GND          → DFPlayer GND  
+3. ESP32 GPIO19       → DFPlayer RX (soft‑TX) 
+4. ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  
+5. DFPlayer SPK_1     → Speaker +  
 6. DFPlayer SPK_2     → Speaker – 
 
 
@@ -61,15 +61,19 @@
 ## 📦 4. Software Requirements:
 
 **Arduino IDE Side:**
+
   • Arduino IDE ≥ 1.8.x
 
 **ESP32 Board Support:**\
+
   • Tools → Boards Manager → “esp32 by Espressif Systems”
 
 **DFRobotDFPlayerMini Library:**\
+
   • Sketch → Include Library → Manage Libraries...
 
 **Python Host Side:**\
+
   • pip install vosk sounddevice pyserial\
   ✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
 
