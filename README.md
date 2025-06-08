@@ -85,10 +85,10 @@ At the top of esp32_to_dfplayer.ino:
 
 ## 🗣️ 6. Python Wake‑Word Listener:
 
-Located in py_to_esp32/:
-**mic_list.py** — list audio devices & indices
-**mic_rms.py** — display RMS levels for mic gain
-**test_serial.py** — verify ESP32 COM port (default: COM5)
+Located in py_to_esp32/:\
+**mic_list.py** — list audio devices & indices\
+**mic_rms.py** — display RMS levels for mic gain\
+**test_serial.py** — verify ESP32 COM port (default: COM5)\
 **wakeword_vosk_to_esp32.py** — listen for keywords, send trigger byte
 
 
