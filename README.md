@@ -94,40 +94,41 @@ Located in py_to_esp32/:\
 
 ## 🗃️ 7. Directory Structure:
 
-Speech-Recognition-with-ESP32-using-VOSK-Model/
-├─ esp32_to_dfplayer/
-│   └─ esp32_to_dfplayer.ino
-├─ py_to_esp32/
-│   ├─ mic_list.py
-│   ├─ mic_rms.py
-│   ├─ test_serial.py
-│   ├─ wakeword_vosk_to_esp32.py
-│   └─ vosk-model-small-en-us-0.15/
+Speech-Recognition-with-ESP32-using-VOSK-Model/ \
+├─ esp32_to_dfplayer/ \
+│   └─ esp32_to_dfplayer.ino \
+├─ py_to_esp32/ \
+│   ├─ mic_list.py \
+│   ├─ mic_rms.py \
+│   ├─ test_serial.py \
+│   ├─ wakeword_vosk_to_esp32.py \
+│   └─ vosk-model-small-en-us-0.15/ \
 └─ README.md (this file)
 
 
 ## 🚀 8. Step‑by‑Step Setup & Usage:
 
-🗂️ Copy 0001.mp3...0005.mp3 to SD card; insert into DFPlayer
+🗂️ Copy 0001.mp3...0005.mp3 to SD card; insert into DFPlayer \
 
-🔌 Wire all hardware as described
+🔌 Wire all hardware as described \
 
 📲 Upload sketch: compile, upload, open Serial Monitor (115200), wait for [INFO] DFPlayer Initialized., then close
 
-**💻 Install Python dependencies:**
-cd py_to_esp32
+**💻 Install Python dependencies:**\
+
+cd py_to_esp32 \
 pip install vosk sounddevice pyserial
 
-**🎧 Identify mic index:**
+**🎧 Identify mic index:** \
 python mic_list.py
 
-**(Optional) Adjust and test mic levels:**
+**(Optional) Adjust and test mic levels:** \
 python mic_rms.py
 
-**🔎 Verify serial port access:**
+**🔎 Verify serial port access:** \
 python test_serial.py
 
-**🎙️ Start wake‑word listener:**
+**🎙️ Start wake‑word listener:** \
 python wakeword_vosk_to_esp32.py
 
 Speak a trigger word **(“jarvis”, “hello”, “hi”, “play”, “hammer time”)** → ESP32 plays matched track
@@ -137,23 +138,23 @@ Speak a trigger word **(“jarvis”, “hello”, “hi”, “play”, “hamm
 
 In Python scripts:
 
-MIC_INDEX = <your mic index>
-PORT      = "COM5"                # or correct ESP32 port
-MODEL_PATH= "vosk-model-small-en-us-0.15"
-In Arduino sketch, modify trigger bytes:
+MIC_INDEX = <your mic index> \
+PORT      = "COM5"                # or correct ESP32 port \
+MODEL_PATH= "vosk-model-small-en-us-0.15" \
+In Arduino sketch, modify trigger bytes: 
 
-#define TRIGGER_BYTE_PLAY1   0x01
-#define TRIGGER_BYTE_PLAY2   0x02
-#define TRIGGER_BYTE_PLAY3   0x03
-#define TRIGGER_BYTE_PLAY4   0x04
-#define TRIGGER_BYTE_SLEEP   0x05
+#define TRIGGER_BYTE_PLAY1   0x01 \
+#define TRIGGER_BYTE_PLAY2   0x02 \
+#define TRIGGER_BYTE_PLAY3   0x03 \
+#define TRIGGER_BYTE_PLAY4   0x04 \
+#define TRIGGER_BYTE_SLEEP   0x05 
 
 
 ## ⚠️ 10. Troubleshooting
 
-**🔇 No Audio:** Check SD filenames (0001.mp3–0005.mp3); verify speaker polarity
+**🔇 No Audio:** Check SD filenames (0001.mp3–0005.mp3); verify speaker polarity \
 
-**🔌 Serial Errors:** Ensure PORT matches Device Manager; close other COM-using apps
+**🔌 Serial Errors:** Ensure PORT matches Device Manager; close other COM-using apps \
 
 **🛑 Wake-Word Not Detected:** Use mic_rms.py to confirm mic input; stay in quiet environment or use a larger Vosk model
 
