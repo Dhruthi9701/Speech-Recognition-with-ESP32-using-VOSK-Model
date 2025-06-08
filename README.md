@@ -27,9 +27,12 @@
 
 • “hammer time” → play 0005.mp3, then enter deep‑sleep (Audio file contains: "OK.... Hammer Time.")
 
-🎵 Standalone Playback: ESP32 + DFPlayer handle MP3 after trigger
+**🎵 Standalone Playback:**
 
-🖥️ PC‑Side Wake‑Word Detection: Uses Vosk on your mic, sends serial commands
+• ESP32 + DFPlayer handle MP3 after trigger
+
+**🖥️ PC‑Side Wake‑Word Detection:** 
+• Uses Vosk on your mic, sends serial commands
 
 
 
@@ -60,16 +63,16 @@
 
 ## 📦 4. Software Requirements:
 
-**Arduino IDE Side:**
+**Arduino IDE Side:**\
   • Arduino IDE ≥ 1.8.x
 
-**ESP32 Board Support:**
+**ESP32 Board Support:**\
   • Tools → Boards Manager → “esp32 by Espressif Systems”
 
-**DFRobotDFPlayerMini Library:**
+**DFRobotDFPlayerMini Library:**\
   • Sketch → Include Library → Manage Libraries...
 
-**Python Host Side:**
+**Python Host Side:**\
   • pip install vosk sounddevice pyserial\
   ✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
 
