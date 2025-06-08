@@ -23,31 +23,31 @@
 • “play” → play 0004.mp3 (Audio file contains: Music(larger mp3 file))
 
 **💤 Deep‑Sleep Mode:**\
-• “hammer time” → play 0005.mp3, then enter deep‑sleep (Audio file contains: "OK.... Hammer Time.")\
+• “hammer time” → play 0005.mp3, then enter deep‑sleep (Audio file contains: "OK.... Hammer Time.")
 
-🎵 Standalone Playback: ESP32 + DFPlayer handle MP3 after trigger\
+🎵 Standalone Playback: ESP32 + DFPlayer handle MP3 after trigger
 
 🖥️ PC‑Side Wake‑Word Detection: Uses Vosk on your mic, sends serial commands
 
 
 ## 💡 2. Hardware Components:
 
-ESP32 Dev Module
-DFPlayer Mini MP3 Module
-8 Ω Speaker (up to 3 W)
-MicroSD Card (FAT32; files 0001.mp3–0005.mp3)
-Micro‑USB Cable (for programming ESP32)
-Jumper Wires
+ESP32 Dev Module\
+DFPlayer Mini MP3 Module\
+8 Ω Speaker (up to 3 W)\
+MicroSD Card (FAT32; files 0001.mp3–0005.mp3)\
+Micro‑USB Cable (for programming ESP32)\
+Jumper Wires\
 
 
 ## 🔌 3. Wiring & Connections:
 
-ESP32 VIN (5 V)    → DFPlayer VCC  
-ESP32 GND          → DFPlayer GND  
-ESP32 GPIO19       → DFPlayer RX (soft‑TX)  
-ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  
-DFPlayer SPK_1     → Speaker +  
-DFPlayer SPK_2     → Speaker –
+ESP32 VIN (5 V)    → DFPlayer VCC  \
+ESP32 GND          → DFPlayer GND  \
+ESP32 GPIO19       → DFPlayer RX (soft‑TX) \ 
+ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  \
+DFPlayer SPK_1     → Speaker +  \
+DFPlayer SPK_2     → Speaker – 
 
 
 ## 📦 4. Software Requirements:
@@ -55,17 +55,21 @@ DFPlayer SPK_2     → Speaker –
 **Arduino IDE Side:**
 Arduino IDE ≥ 1.8.x
 
-**ESP32 Board Support:** Tools → Boards Manager → “esp32 by Espressif Systems”
-**DFRobotDFPlayerMini Library:** Sketch → Include Library → Manage Libraries...
+**ESP32 Board Support:**\
+Tools → Boards Manager → “esp32 by Espressif Systems”
 
-**Python Host Side:**
-pip install vosk sounddevice pyserial
+**DFRobotDFPlayerMini Library:**\
+Sketch → Include Library → Manage Libraries...
+
+**Python Host Side:**\
+pip install vosk sounddevice pyserial\
 ✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
 
 
 ## 🎯 5. Arduino Sketch Overview:
 
-At the top of esp32_to_dfplayer.ino:
+At the top of esp32_to_dfplayer.ino:\
+
 #include <Arduino.h>
 #include <HardwareSerial.h>
 #include <DFRobotDFPlayerMini.h>
