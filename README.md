@@ -14,6 +14,7 @@
 10. Troubleshooting
 <br>
 
+
 ## 🧩 1. Features:
 
 **✔️ Multiple Triggers:**\
@@ -30,6 +31,8 @@
 🖥️ PC‑Side Wake‑Word Detection: Uses Vosk on your mic, sends serial commands
 <br>
 
+
+
 ## 💡 2. Hardware Components:
 
 ESP32 Dev Module\
@@ -40,6 +43,8 @@ Micro‑USB Cable (for programming ESP32)\
 Jumper Wires
 <br>
 
+
+
 ## 🔌 3. Wiring & Connections:
 
 ESP32 VIN (5 V)    → DFPlayer VCC  \
@@ -49,6 +54,8 @@ ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  \
 DFPlayer SPK_1     → Speaker +  \
 DFPlayer SPK_2     → Speaker – 
 <br>
+
+
 
 ## 📦 4. Software Requirements:
 
@@ -65,6 +72,8 @@ Sketch → Include Library → Manage Libraries...
 pip install vosk sounddevice pyserial\
 ✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
 <br>
+
+
 
 ## 🎯 5. Arduino Sketch Overview:
 
@@ -83,6 +92,9 @@ At the top of esp32_to_dfplayer.ino:
 0x05 → SLEEP → PLAY5 (0005.mp3) then deep‑sleep
 <br>
 
+
+
+
 ## 🗣️ 6. Python Wake‑Word Listener:
 
 Located in py_to_esp32/:\
@@ -91,6 +103,9 @@ Located in py_to_esp32/:\
 **test_serial.py** : verify ESP32 COM port (default: COM5)\
 **wakeword_vosk_to_esp32.py** : listen for keywords, send trigger byte
 <br>
+
+
+
 
 ## 🗃️ 7. Directory Structure:
 
@@ -105,6 +120,8 @@ Speech-Recognition-with-ESP32-using-VOSK-Model/ \
 │   └─ vosk-model-small-en-us-0.15/ \
 └─ README.md (this file)
 <br>
+
+
 
 ## 🚀 8. Step‑by‑Step Setup & Usage:
 
@@ -138,6 +155,9 @@ python wakeword_vosk_to_esp32.py
 Speak a trigger word **(“jarvis”, “hello”, “hi”, “play”, “hammer time”)** → ESP32 plays matched track
 <br>
 
+
+
+
 ## ⚙️ 9. Configuration Options
 
 In Python scripts:
@@ -153,6 +173,9 @@ In Arduino sketch, modify trigger bytes:
 #define TRIGGER_BYTE_PLAY4   0x04 \
 #define TRIGGER_BYTE_SLEEP   0x05 
 <br>
+
+
+
 
 ## ⚠️ 10. Troubleshooting
 
