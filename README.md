@@ -114,21 +114,25 @@ Speech-Recognition-with-ESP32-using-VOSK-Model/ \
 
 📲 Upload sketch: compile, upload, open Serial Monitor (115200), wait for [INFO] DFPlayer Initialized., then close
 
-**💻 Install Python dependencies:**\
+**💻 Install Python dependencies:**
 
 cd py_to_esp32 \
 pip install vosk sounddevice pyserial
 
-**🎧 Identify mic index:** \
+**🎧 Identify mic index:** 
+
 python mic_list.py
 
-**(Optional) Adjust and test mic levels:** \
+**(Optional) Adjust and test mic levels:** 
+
 python mic_rms.py
 
-**🔎 Verify serial port access:** \
+**🔎 Verify serial port access:** 
+
 python test_serial.py
 
-**🎙️ Start wake‑word listener:** \
+**🎙️ Start wake‑word listener:** 
+
 python wakeword_vosk_to_esp32.py
 
 Speak a trigger word **(“jarvis”, “hello”, “hi”, “play”, “hammer time”)** → ESP32 plays matched track
