@@ -17,12 +17,14 @@
 ## 🧩 1. Features:
 
 **✔️ Multiple Triggers:**\
+
 • “jarvis” → play 0001.mp3 (Audio file contains: "Did someone say genius?")\
 • “hello” → play 0002.mp3 (Audio file contains: "Hello, I'm Listening.")\
 • “hi” → play 0003.mp3 (Audio file contains: "Yes Boss!")\
 • “play” → play 0004.mp3 (Audio file contains: Music(larger mp3 file))
 
 **💤 Deep‑Sleep Mode:**\
+
 • “hammer time” → play 0005.mp3, then enter deep‑sleep (Audio file contains: "OK.... Hammer Time.")
 
 🎵 Standalone Playback: ESP32 + DFPlayer handle MP3 after trigger
@@ -46,12 +48,12 @@
 
 ## 🔌 3. Wiring & Connections:
 
-ESP32 VIN (5 V)    → DFPlayer VCC  \
-ESP32 GND          → DFPlayer GND  \
-ESP32 GPIO19       → DFPlayer RX (soft‑TX) \ 
-ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  \
-DFPlayer SPK_1     → Speaker +  \
-DFPlayer SPK_2     → Speaker – 
+1. ESP32 VIN (5 V)    → DFPlayer VCC  \
+2. ESP32 GND          → DFPlayer GND  \
+3. ESP32 GPIO19       → DFPlayer RX (soft‑TX) \ 
+4. ESP32 GPIO18       ← DFPlayer TX (soft‑RX)  \
+5. DFPlayer SPK_1     → Speaker +  \
+6. DFPlayer SPK_2     → Speaker – 
 
 
 
@@ -59,17 +61,17 @@ DFPlayer SPK_2     → Speaker –
 ## 📦 4. Software Requirements:
 
 **Arduino IDE Side:**
-Arduino IDE ≥ 1.8.x
+  • Arduino IDE ≥ 1.8.x
 
 **ESP32 Board Support:**\
-Tools → Boards Manager → “esp32 by Espressif Systems”
+  • Tools → Boards Manager → “esp32 by Espressif Systems”
 
 **DFRobotDFPlayerMini Library:**\
-Sketch → Include Library → Manage Libraries...
+  • Sketch → Include Library → Manage Libraries...
 
 **Python Host Side:**\
-pip install vosk sounddevice pyserial\
-✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
+  • pip install vosk sounddevice pyserial\
+  ✅ Download and extract a Vosk model (e.g. vosk-model-small-en-us-0.15) into your project folder.
 
 
 
@@ -84,11 +86,11 @@ At the top of esp32_to_dfplayer.ino:
 
 📟 The ESP32 listens for serial bytes over UART2 (GPIO18/19):
 
-0x01 → PLAY1 (0001.mp3)  
-0x02 → PLAY2 (0002.mp3)  
-0x03 → PLAY3 (0003.mp3)  
-0x04 → PLAY4 (0004.mp3)  
-0x05 → SLEEP → PLAY5 (0005.mp3) then deep‑sleep
+  • 0x01 → PLAY1 (0001.mp3)  
+  • 0x02 → PLAY2 (0002.mp3)  
+  • 0x03 → PLAY3 (0003.mp3)  
+  • 0x04 → PLAY4 (0004.mp3)  
+  • 0x05 → SLEEP → PLAY5 (0005.mp3) then deep‑sleep
 
 
 
@@ -97,10 +99,10 @@ At the top of esp32_to_dfplayer.ino:
 ## 🗣️ 6. Python Wake‑Word Listener:
 
 Located in py_to_esp32/:\
-**mic_list.py** : list audio devices & indices\
-**mic_rms.py** : display RMS levels for mic gain\
-**test_serial.py** : verify ESP32 COM port (default: COM5)\
-**wakeword_vosk_to_esp32.py** : listen for keywords, send trigger byte
+• **mic_list.py** : list audio devices & indices\
+• **mic_rms.py** : display RMS levels for mic gain\
+• **test_serial.py** : verify ESP32 COM port (default: COM5)\
+• **wakeword_vosk_to_esp32.py** : listen for keywords, send trigger byte
 
 
 
@@ -131,25 +133,25 @@ Speech-Recognition-with-ESP32-using-VOSK-Model/ \
 📲 Upload sketch: compile, upload, open Serial Monitor (115200), wait for [INFO] DFPlayer Initialized., then close
 
 **💻 Install Python dependencies:**
+  • cd py_to_esp32 \
+  • pip install vosk sounddevice pyserial
 
-cd py_to_esp32 \
-pip install vosk sounddevice pyserial
 
 **🎧 Identify mic index:** 
+  • python mic_list.py
 
-python mic_list.py
 
 **(Optional) Adjust and test mic levels:** 
+  • python mic_rms.py
 
-python mic_rms.py
 
 **🔎 Verify serial port access:** 
+  • python test_serial.py
 
-python test_serial.py
 
 **🎙️ Start wake‑word listener:** 
+  • python wakeword_vosk_to_esp32.py
 
-python wakeword_vosk_to_esp32.py
 
 Speak a trigger word **(“jarvis”, “hello”, “hi”, “play”, “hammer time”)** → ESP32 plays matched track
 
@@ -178,9 +180,9 @@ In Arduino sketch, modify trigger bytes:
 
 ## ⚠️ 10. Troubleshooting
 
-**🔇 No Audio:** Check SD filenames (0001.mp3–0005.mp3); verify speaker polarity 
+• **🔇 No Audio:** Check SD filenames (0001.mp3–0005.mp3); verify speaker polarity 
 
-**🔌 Serial Errors:** Ensure PORT matches Device Manager; close other COM-using apps 
+• **🔌 Serial Errors:** Ensure PORT matches Device Manager; close other COM-using apps 
 
-**🛑 Wake-Word Not Detected:** Use mic_rms.py to confirm mic input; stay in quiet environment or use a larger Vosk model
+• **🛑 Wake-Word Not Detected:** Use mic_rms.py to confirm mic input; stay in quiet environment or use a larger Vosk model
 
