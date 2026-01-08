@@ -1,8 +1,7 @@
-#Captures audio from a chosen mic index and prints real-time RMS levels.
 import sounddevice as sd
 import numpy as np
 
-DEVICE = 1  # replace with your mic index
+DEVICE = 1  # mic index
 
 def callback(indata, frames, time_info, status):
     rms = np.sqrt(np.mean(indata.astype(np.float32)**2))
